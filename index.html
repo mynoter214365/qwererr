@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const pattern = /^(.+)@gmail.com$/;
+      window.onload = function () {
+        document.getElementById("show-text").onclick = function () {
+          const input = document.getElementById("input");
+          if (pattern.test(input.value) === true) {
+            alert("환영합니다.");
+          }
+          if (pattern.test(input.value) === false) {
+            alert("다시입력해주세요.");
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input id="input" />
+    <button id="show-text">입력</button>
+    <div id="display"></div>
+  </body>
+</html>
